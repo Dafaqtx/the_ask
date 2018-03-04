@@ -90,6 +90,8 @@ html, body {
     border: 0;
     width: 40px;
     font-weight: 600;
+    position: absolute;
+    left: -10px;
 }
 
 #amount:focus {

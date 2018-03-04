@@ -41,7 +41,7 @@ $(document).ready(function() { // код будет работает после 
 	        if ( slideValue < val ) { // код выполняется только до полученного знаяения через AJAX
         		$( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) ); // получение значения ползунка
         	    $("#slider").slider("value", slideValue + 0.2); // увелечения знаяения на 0.2
-        	    setTimeout(scrollSlider, 200); // время изменения значения в миллисекундах
+        	    setTimeout(scrollSlider, 2000); // время изменения значения в миллисекундах
         	}
 	       
 	    };	
