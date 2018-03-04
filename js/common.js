@@ -7,15 +7,12 @@ $(document).ready(function() { // код будет работает после 
 
 		  	$( "#slider" ).slider({
 	  	    range: "min", // тип слайдера
-	  	    value: 0, // изначальное значение
+	  	    value: val - 0.2, // получаем значение через AJAX и отнимаем 0.2 ( 1 шаг ) для корректного отображения
 	  	    min: 0, // минимальное значение
 	  	    step: 0.2,  // шаг изменения значения
 	  	    max: 15, // максимальное значение
 	  	    change: function( event, ui ) { // получние значения ползунка при каждом изменении его положения
 	  	    	$( "#amount" ).val( "$" + ui.value );
-
-	  	    	// вызов функция при изменение значения
-	  	    	scrollDecrement();
 
 	  	    	// изменения фона 'target' и скрытие надписи 'You need' когда значение равно 15
 	  	    	if ( $("#slider").slider("value") == 15 ) { // проверка равно ли значение 15 (максимальному для приложения)
@@ -37,20 +34,15 @@ $(document).ready(function() { // код будет работает после 
 
 		// Функция для увелеичения знаяения ползунка
 		function scrollSlider() {	
-			var slideValue = $("#slider").slider("value");
-	        if ( slideValue < val ) { // код выполняется только до полученного знаяения через AJAX
+			var slideValue = $("#slider").slider("value"); //значение ползунка
+			var slideMaxValue = $('#slider').slider('option', 'max'); // максимальное значение ползунка
+	        if ( slideValue < slideMaxValue ) { // код выполняется только если полученноре значения через AJAX меньше максимального возможного значения ползунка
         		$( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) ); // получение значения ползунка
         	    $("#slider").slider("value", slideValue + 0.2); // увелечения знаяения на 0.2
         	    setTimeout(scrollSlider, 2000); // время изменения значения в миллисекундах
         	}
 	       
 	    };	
-
-    	// Функция изменения значения для "You need"
-    	function scrollDecrement() {
-    		var valueOf = Math.round(Math.abs($( "#slider" ).slider( "value") - 15));
-    		$('#want-pay').val( "$" + valueOf); 
-    	}
 	    
 	    // Значение для ползунка добавляем по него
 	  	$(".ui-slider-handle").append($("#amount"));
