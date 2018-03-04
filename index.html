@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>The Ask application</title>
+	<link rel="stylesheet" href="css/jquery-ui.css">
+	<!-- Подключаем стандартные стили для jQuery-ui-->
+
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Подключаем стили для приложения-->
+
+	<script src="js/jquery-1.12.4.js"></script>
+	<!-- Подключаем jQuery версии 1.12.4 -->
+
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<!-- Подключаем jQuery-ui -->
+
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet"> 
+	<!-- Подключаем похожий шрифт -->
+
+</head>
+<body>
+	<!-- beggin .overlay -->
+	<div class="overlay">
+
+		<!-- beggin .modal--container -->
+		<div class="modal--container">
+
+			<!-- beggin .modal -->
+			<div class="modal">
+
+				<!-- beggin .modal__header -->
+				<div class="modal__header">
+					<div class="modal__title">Target Indicator Demo</div>
+				</div>
+				<!-- /.modal__header -->
+
+				<!-- beggin .modal__content--container -->
+				<div class="modal__content--container">
+
+					<!-- beggin .modal__content -->
+					<div class="modal__content">
+						<div class="modal__reached">Reached:</div>
+						<div id="slider">
+						  <input type="text" id="amount" readonly>
+						</div>
+						<div class="modal__target">Target <span class="modal__target--price">$15</span></div>
+						<div class="modal__info">
+							You need <input type="text" id="want-pay" readonly> more to reach your target.
+						</div>
+
+					</div>
+					<!-- /.modal__content -->
+
+				</div>
+				<!-- /.modal__content--container -->
+
+			</div>
+			<!-- /.modal -->
+
+		</div>
+		<!-- /.modal--container -->
+
+	</div>
+	<!-- /.overlay -->
+	
+<script src="js/common.js"></script>
+<!-- Подключаем скрипт для приложения-->
+
+</body>
+</html>

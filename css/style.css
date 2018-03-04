@@ -1,0 +1,138 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.overlay { 
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0, 0.2);
+}
+
+.modal--container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	height: 100%;
+}
+
+.modal {
+	width: 370px;
+}
+
+.modal__header {
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	background: #4a4949;
+	padding: 10px;
+	color: #fff;
+	font-size: 14px;
+}
+
+.modal__content--container {
+	padding: 10px;
+	background-color: #f2f2f2;
+	border-bottom-left-radius: 7px;
+	border-bottom-right-radius: 7px;
+	border: 1px solid #4a4949;
+}
+
+.modal__content {
+	background-color: #fff;
+	border-radius: 7px;
+	border: 1px solid #dfdede;
+	padding: 25px;
+
+}
+
+.modal__reached {
+	width: 80px;
+	float: left;
+}
+
+.modal__target {
+	width: 50px;
+    float: left;
+    margin-top: -20px;
+    background: grey;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.modal__target--price {
+	font-weight: 600;
+	font-size: 18px;
+}
+
+#slider {
+	float: left;
+    width: 130px;
+    border: 3px solid #cecece;
+    border-radius: 0;
+    height: 10px;
+    background: #cecece;
+}
+
+#amount {
+	color: #626262;
+    font-size: 14px;
+    margin-top: 10px;
+    border: 0;
+    width: 40px;
+    font-weight: 600;
+}
+
+#amount:focus {
+	outline: none;
+}
+
+#want-pay {
+	width: 22px;
+	border: none;
+	color: grey;
+}
+
+.modal__info {
+	text-align: center;
+	color: grey;
+	font-size: 14px;
+	margin-top: 50px;
+	clear: both;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default, 
+.ui-button, html .ui-button.ui-state-disabled:hover, 
+html .ui-button.ui-state-disabled:active {
+	width: 0;
+	height: 0;
+	border: none;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid grey;
+	top: 20px;
+	outline: none;
+	background: none;
+}
+
+.ui-widget-header {
+	background: #0489D1;
+}
+
+.ui-corner-all, 
+.ui-corner-bottom, 
+.ui-corner-right, 
+.ui-corner-br {
+	border-radius: 0 !important;
+}
+
